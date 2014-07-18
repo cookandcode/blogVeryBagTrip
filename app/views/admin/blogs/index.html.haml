@@ -11,6 +11,7 @@
       - @blogs.each do |blog|
         %tr
           %td
-            blog.title
+            = blog.title
           %td
-            = link_to "Supprimer", admin_blogs_path(@blog), method: :delete, class: "btn btn-danger pull-right"
+            = link_to "Supprimer", admin_blog_path(blog), method: :delete, class: "btn btn-danger pull-right"
+            = link_to "Edit", edit_admin_blog_path(blog), class: "btn btn-primary pull-right"

@@ -34,10 +34,10 @@ class Admin::BlogsController < AdminController
   end
 
   def destroy
-    @article = Article.find(params[:id])
-    @article.destroy
+    @blog = Blog.find(params[:id])
+    @blog.destroy
    
-    redirect_to blogs_path
+    redirect_to admin_blogs_path
   end
 
   protected
