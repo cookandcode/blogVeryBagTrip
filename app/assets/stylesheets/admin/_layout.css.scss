@@ -1,0 +1,43 @@
+/*==============================
+=            LAYOUT            =
+==============================*/
+#main-links,
+#footer-page {
+  background: #F8F8F8;
+}
+
+#header-page > #main-links {
+  padding: 20px;
+  @include box-shadow(0px 2px 0px rgba(0,0,0,.06));
+}
+
+#footer-page {
+  padding: 20px 0;
+  @include box-shadow(0px -2px 0px rgba(0,0,0,.06));
+  h3 {
+    font-size: 28px;
+    color: #BFC6CC;
+    margin-top: 0;
+    text-shadow: 0px 1px 0px #fff;
+    i {
+      color: #EB7894;
+    }
+  }
+}
+
+.admin-links {
+  > li {
+    display: inline-block; 
+    margin-left: 30px;
+  }
+}
+
+.brand-name {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+}
+
+#main-content {
+  padding: 50px 0;
+}

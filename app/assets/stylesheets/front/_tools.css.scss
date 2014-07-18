@@ -1,0 +1,173 @@
+/* _tools.scss - Use this file to define all the mixins and elements of the application.
+ * 
+ * Please verify that this file is correctly import into screen.scss,
+ * the initializer file... (or equivalent):
+ * @import "_tools.scss"; */
+
+/* 
+ * TYPOGRAPHY (@font-face)
+ * declare any typeface you need here.
+/*
+*/
+  /* VERB CONDENSED */
+
+  @font-face {
+    font-family: 'SSP-Bold';
+    src: font-url('SourceSansPro-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SSP-Regular';
+    src: font-url('SourceSansPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'SSP-Extralight';
+    src: font-url('SourceSansPro-Extralight.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Pacifico';
+    src: font-url('Pacifico.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+/* 
+ * VARIABLES
+ * start to define all of your SASS variables here.
+/*
+*/
+  $primary-color: #3EA6D1;
+  $alt-blue: #3694BC;
+  $dark-blue: #324D5B; 
+  $secondary-color: #FF7D24; /* a very nice orange contrast */ 
+  $text-color: #333;
+
+  $regular: "SSP-Regular", Helvetica, Arial, sans-serif;
+  $light: "SSP-Extralight", Helvetica, Arial, sans-serif;
+  $bold: "SSP-Bold", Helvetica, Arial, sans-serif;
+  $typo-heading: "Pacifico", Helvetica, Arial, sans-serif;
+
+
+/* 
+ * MIXINS
+ * If you don't import mixins of compass/css3...
+ * you can put your own mixins here.
+/*
+*/
+  @mixin border-radius($radius) {
+    -webkit-border-radius:  $radius;
+    -moz-border-radius:     $radius;
+    border-radius:          $radius;
+  }
+
+  @mixin box-shadow($args) {
+    -webkit-box-shadow: $args;
+    box-shadow:         $args;
+  }
+
+  @mixin box-shadow-multi($arg1, $arg2) {
+    -webkit-box-shadow: $arg1, $arg2;
+    box-shadow:         $arg1, $arg2;
+  }
+
+  @mixin box-sizing($arg: border-box) {
+    -webkit-box-sizing: $arg;
+    -moz-box-sizing:    $arg;   
+    box-sizing:         $arg;
+  }
+
+  @mixin background-size($arg: cover) {
+    -webkit-background-size: $arg;
+    -moz-background-size:    $arg;   
+    background-size:         $arg;
+  }
+
+  @mixin gradient($arg1, $arg2) {
+    background-color: $arg2;
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, $arg1), color-stop(70%, $arg2));
+    background-image: -webkit-linear-gradient($arg1,$arg2 70%);
+    background-image: -moz-linear-gradient($arg1,$arg2 70%);
+    background-image: -o-linear-gradient($arg1,$arg2 70%);
+    background-image: linear-gradient($arg1,$arg2 70%);
+  }
+
+
+
+
+/* 
+* __BUTTONS ELEMENT
+* the default style of the button
+/*
+*/
+  .btn-vbt {
+    background: $primary-color;
+    color: #fff;
+    @include border-radius(4px);
+    padding: 4px 14px;
+    font-size: 18px;
+    text-decoration: none;
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    text-shadow: 0px 1px 1px rgba(0,0,0,.3);
+    border: 2px solid $alt-blue;
+    &:hover {
+      background: lighten($primary-color, 5%);
+      color: #fff;
+      border: 2px solid $alt-blue;
+    }
+    &:active {
+      background: darken($primary-color, 10%);
+      border: 2px solid $primary-color;
+      -webkit-transition: all 350 ease;
+              transition: all 350 ease;
+    }
+  }
+
+  .btn-vbt.is-little {
+    padding: 4px 8px;
+    font-size: 14px;
+    border: 2px solid $alt-blue;
+    @include border-radius(4px);
+  }
+
+  .btn-vbt.is-large {
+    padding: 11px 80px 8px 80px;
+    font-size: 24px;
+  }
+
+  .btn-vbt.contrast {
+    background-color: $secondary-color;
+    border: 4px solid $alt-blue;
+    &:hover {
+      background: lighten($secondary-color, 10%);
+      border: 4px solid darken($secondary-color, 5%);
+    }
+  }
+
+  .no-left-corner {
+    @include border-radius(0px 8px 8px 0px);
+    border-left: 0;
+    outline: none;
+    &:hover {
+      border-left: 0;
+    }
+    &:active {
+      background: lighten($primary-color, 5%);
+      border: 4px solid $alt-blue;
+      outline: none;
+      border-left: 0;
+    }
+  }
+
+
+

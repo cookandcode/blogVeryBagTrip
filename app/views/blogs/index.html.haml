@@ -1,0 +1,24 @@
+%main#blog-index
+  .container
+    - distance = "50px"
+    - timing = "500ms"
+
+    - @blogs.each_slice(3) do |blogs|
+      - blogs.each do |blog|
+        .row.blog-row 
+          .col-md-4{data: {scroll: {reveal: "enter bottom and move #{distance} over #{timing}"}}}
+            = link_to "#", class: "blog-post" do
+              = image_tag("blog-post.jpg")
+              %footer.footer-post
+                %h3= blog.title
+          
+
+  %section#block-foot
+    .container 
+      %p.lead
+        ="Toi aussi partage ton experience de Backpacker et créée ton blog"
+        %span
+          = link_to "Let's get Trip", "#", class: "btn-vbt is-big"
+
+
+  

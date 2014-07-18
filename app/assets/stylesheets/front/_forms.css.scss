@@ -1,0 +1,23 @@
+/* _forms.scss - Use this file to define custom forms styles.
+* 
+* Please verify that this file is correctly import into screen.scss,
+* the initializer file... (or equivalent):
+* @import "_forms.scss"; */
+
+  .form-control {
+    height: 42px;
+    @include border-radius(4px);
+    @include box-shadow(none);
+    border: 2px solid $alt-blue;
+    font-size: 20px;
+    line-height: 1.4;
+    background: rgba(255,255,255, .95);
+    &:focus {
+      border-color: $alt-blue;
+      @include box-shadow(none);
+    }
+  }
+
+  .form-horizontal .control-label {
+    padding-top: 10px;
+  }

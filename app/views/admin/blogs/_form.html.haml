@@ -1,0 +1,13 @@
+= form_for [:admin, @blog] do |f| 
+
+  = f.label :title
+  = f.text_field :title, class: "form-control"
+  - if @blog.photo
+    .img
+      %h4
+        Actual Photo
+      = image_tag @blog.photo.thumb("400x400").url
+  = f.label :photo
+  = f.file_field :photo, class: "form-control"
+
+  = f.submit class: "btn-vbt btn-block is-large"

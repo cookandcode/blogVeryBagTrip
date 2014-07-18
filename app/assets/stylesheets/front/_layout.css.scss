@@ -1,0 +1,148 @@
+/* _layout.scss - Use this file to define fundamentals parts of the application.
+ * 
+ * Please verify that this file is correctly import into screen.scss,
+ * the initializer file... (or equivalent):
+ * @import "_layout.scss"; */
+
+/*
+ * __HEADER
+/* 
+*/
+  #header-page .navbar-fixed-top {
+    background: #F8F8F8;
+    @include box-shadow(0px 2px 0px rgba(0,0,0,.1));
+    padding: 10px 20px;
+    .brand-name {
+      margin-top: 2px;
+      font-size: 26px;
+      font-weight: bold;
+      text-decoration: none;
+      &:hover {
+        border: 0;
+        text-decoration: none;
+      }
+    }
+    ul > li {
+      display: inline-block;
+      margin-left: 20px;
+      margin-top: 12px;
+      > a {
+        color: #444;
+        font-size: 22px;
+        color: $dark-blue;
+        &:hover {
+          color: $primary-color;
+          border: 0;
+        }
+      }
+    }
+  }
+  #hero-wrapper {
+    display: table;
+    width: 100%;
+    height: 480px;
+    background: image-url("backpacker-5.jpg");
+    background-size: cover;
+    background-position: center center;
+    h1 {
+      font-size: 72px;
+      line-height: 1.6;
+      text-shadow: 0px 2px 0px rgba(0,0,0,.3);
+    }
+    .lead {
+      font-size: 26px;
+      margin: 20px 0;
+      text-shadow: 0px 0px 8px rgb(0,0,0);
+    }
+  }
+  .wrapper-inner {
+    vertical-align: middle;
+    display: table-cell;
+  }
+  .cover-head {
+    width: 50%;
+    margin: 0 auto;
+    color: #fff;
+  }
+
+
+/*
+ * __Blog Index
+/* 
+*/
+  #blog-index {
+    margin-top: 30px;
+  }
+  .blog-row {
+    margin-bottom: 30px;
+    .blog-post {
+      display: block;
+      border: 0;
+      &:hover {
+        border: 0;
+      }
+      @include box-shadow(0px 1px 0px rgba(0,0,0,.1));
+      img {
+        max-width: 100%;
+        @include border-radius(4px 4px 0px 0px);
+        @include background-size();
+      }
+      min-height: 150px;
+      @include border-radius(4px);
+    }
+  }
+
+  .footer-post {
+    width: 100%;
+    padding: 10px 13px;
+    background: #F8F8F8;
+    @include border-radius(0 0 4px 4px);
+    h3 {
+      font-size: 18px;
+      font-family: $light;
+      margin: 0;
+    } 
+  }
+
+/*
+ * __BLOCKFOOT
+/* 
+*/
+  #block-foot {
+    text-align: center;
+    background: #E6EEF2;
+    padding: 30px 0px;
+    .lead {margin: 0;}
+    a {margin-left: 20px;}
+  }
+
+/*
+ * __FOOTER
+/* 
+*/
+  #footer-page {
+    background: image-url("combi.jpg");
+    background-position: center center;
+    @include background-size();
+    @include box-shadow(inset 0px 2px 8px rgba(0,0,0,.8));
+    #main-footer {
+      padding: 20px 0;
+      .links-list {
+        text-indent: 5px;
+        > li {margin-bottom: 8px;}
+      }
+    }
+    h4 {
+      font-size: 22px;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    #sub-footer {
+      background: rgba(0,0,0,.75);
+      padding: 20px 0;
+      color: #fff;
+    }
+    .copyright {
+      margin: 0;
+    }
+  }

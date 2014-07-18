@@ -1,0 +1,10 @@
+development:
+  adapter: postgresql
+  host: localhost
+  encoding: unicode
+  database: blog_vbt_development
+  pool: 5
+  username: rails
+  password: rails
+  port: 5432
+

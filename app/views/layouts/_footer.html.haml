@@ -1,0 +1,45 @@
+%footer#footer-page{role: "contentinfo", itemscope: "", itemtype: "http://schema.org/WPFooter"}
+  .container#main-footer
+    .row
+      .col-md-4
+        %h4{itemprop: "name"}="Top Blog"
+        %ul.links-list
+          %li
+            = link_to "Blog1", "#", itemprop: "url"
+          %li
+            = link_to "Blog2", "#", itemprop: "url"
+          %li
+            = link_to "Blog3", "#", itemprop: "url"
+          %li
+            = link_to "Blog4", "#", itemprop: "url"
+          %li
+            = link_to "Blog5", "#", itemprop: "url"
+      .col-md-4
+        %h4{itemprop: "about"}="Top destination"
+        %ul.links-list
+          %li
+            = link_to "Paris", "#", itemprop: "url"
+          %li
+            = link_to "New York", "#", itemprop: "url"
+          %li
+            = link_to "Australie", "#", itemprop: "url"
+      .col-md-4
+        %h4{itemprop: "name"}="A propos"
+        
+        %p.contact-point{itemscope: "", itemtype: "http://schema.org/ContactPoint"}
+          %i.entypo-phone
+          %span{itemprop: "telephone"}
+            %a{href:"tel:+33(0)685781567"}="+33 (0)6 85 78 15 67"
+          %br/
+          %i.entypo-mail
+          %span{itemprop: "email"}
+            %a{href: "mailto:contact@verybagtrip.com"}
+              ="contact@verybagtrip.com"
+  #sub-footer
+    .container
+      .row
+        .col-md-12{itemscope: "", itemtype: "http://schema.org/CreativeWork"}
+          %p.copyright{itemprop: "copyrightHolder"}
+            ="© VeryBagTrip 2014 Tous droits réservés."
+        
+           

@@ -1,0 +1,15 @@
+%header#header-page
+  %nav#main-links.navbar-fixed-top{role: "navigation"}
+    = link_to "#", class: "brand-name" do
+      = image_tag('logo-admin.png', height: "60")
+    
+    %ul.pull-right.admin-links
+      %li 
+        = link_to "Ajouter un blog", new_admin_blog_path
+      %li 
+        = link_to "Liste des blogs", admin_blogs_path
+      %li
+        = link_to "Retour au front", blogs_path, itemprop: "url", class: "btn-vbt is-little"
+      
+  .clearfix
+

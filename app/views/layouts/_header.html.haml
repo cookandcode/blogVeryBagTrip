@@ -1,0 +1,24 @@
+%header#header-page
+  %nav#main-links.navbar-fixed-top{role: "navigation"}
+    = link_to "#", class: "brand-name pull-left" do
+      = image_tag('logo-vbt-2.png', height: "50")
+    
+    %ul.pull-right.social-networks
+      %li
+        = link_to "Admin", new_admin_blog_path, itemprop: "url"
+          
+    
+    .clearfix
+
+#hero-wrapper
+  .wrapper-inner
+    .cover-head.text-center{data: {0 => 'opacity: 1; -webkit-transform: translateY(0px); -moz-transform: translateY(0px); transform: translateY(0px);', 300 => 'opacity: 0; -webkit-transform: translateY(70px); -moz-transform: translateY(70px); transform: translateY(70px);'}}
+      %h1="Your Verybagtrip"
+      %p.lead="Découvre les expériences de nos Backpackers en route"
+
+      %form{action: ""}
+        .input-group
+          %input.form-control{type: "text", placeholder: "New York City"}
+          %span.input-group-btn
+            %button{class: "btn-vbt no-left-corner is-big"}="Valider"
+  

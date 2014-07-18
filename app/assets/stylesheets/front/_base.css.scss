@@ -1,0 +1,79 @@
+/* _base.scss - Base rules are the reset elements for all browsers,
+ * and the settings of headings sizes,
+ * default link styles, 
+ * default fonts styles and body backgrounds...
+ *
+ * Please verify that this file is correctly import into screen.scss,
+ * the initializer file... (or equivalent):
+ * @import "_base.scss"; */
+
+/* 
+ * __ELEMENTS
+/*
+*/
+  body {
+    font-family: $regular;
+    font-size: 16px;
+    line-height: 1.4;
+    padding-top: 20px;
+    background: #FFF;
+    position: relative;
+    height: 100%;
+    padding-top: 0;
+  }
+
+  strong { 
+    font-family: $bold;
+    font-weight: 600;
+  }
+
+  h1, .h1, 
+  h2, .h2,
+  h3, .h3,
+  h4, .h4,
+  h5, .h5,
+  h6, .h6 {
+    font-family: $typo-heading;  
+  }
+
+  h1, .h1 {
+    font-size: 38px;
+    line-height: 1;
+  }
+
+  h2, .h2 {
+    font-size: 48px;
+    line-height: 1.8;
+  }
+
+  h3, .h3 {
+    font-size: 24px;
+    line-height: 1.5;
+  }
+
+  h5, .h5 {
+    font-size: 14px;
+  }
+
+  ul {
+    padding-left: 0;
+    margin: 0;
+    li {
+      list-style: none;
+    }
+  }
+
+  a {
+    -webkit-transition-property: background-color, color;
+    -webkit-transition-duration: 200ms;
+    font-family: $regular;
+    font-weight: 400;
+    font-size: 16px;
+    padding-bottom: 2px;
+    color: $secondary-color;
+    &:hover {
+      cursor: pointer; 
+      text-decoration: none !important;
+      color: $secondary-color;
+    }
+  }

@@ -1,0 +1,11 @@
+%footer#footer-page{role: "contentinfo", itemscope: "", itemtype: "http://schema.org/WPFooter"}
+  .container#main-footer.text-center
+    %h3{itemprop: "name"}
+      ="Made with"
+      %i.entypo-heart
+      ="by Tedd"
+
+    %ul
+      %li
+        = link_to "Retour au front", blogs_path, itemprop: "url", class: "btn-vbt is-little"
+      
